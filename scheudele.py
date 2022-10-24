@@ -18,7 +18,7 @@ class ACME_schuedele:
         lines = self.txt.splitlines()
         return lines
     
-    ## This Private method 
+    ## This Private methof create two atributes that are lists that one contains the Employes and the other contains the schuedele
     def __separate_workers_split(self): 
         self.Employes         = []
         self.Schedules        = []
@@ -28,10 +28,12 @@ class ACME_schuedele:
             self.Employes.append(aux[0])
             self.Schedules.append(aux[1])
     
+    ## This Private method separate in the different time splits all the schuedeles of the Employes
     def __separate_Schedules_split(self):
         self.Schedules_split = []
         self.Schedules_split = [item.split(',') for item in self.Schedules]
 
+   ## This Private method iterate all element in a list, and comparate if each element is in a list in a list of lists
     def __func_iterate_list(self,new_list,index_list):
         Output=[]
         for i in range(index_list+1,len(self.Schedules_split)):
@@ -42,10 +44,12 @@ class ACME_schuedele:
             Output.append(str(self.Employes[index_list]+'-'+self.Employes[i]+': '+str(acum)))    
         return Output
 
+    ## This method return the content of the txt file 
     def read_txt(self):
         print(self.txt)
         return self.txt
 
+    ## This method return a list with the coincides of the Employes schuedeles
     def table_coincides(self):
         self.__separate_workers_split()
         self.__separate_Schedules_split()
@@ -54,6 +58,7 @@ class ACME_schuedele:
         self.coincided=[item for lista in list_list for item in lista]
         return self.coincided
     
+    ## This method create a txt file with the coincides.
     def create_output_file(self):
         aux_file=self.txt_file.split("\\")
         print(aux_file)

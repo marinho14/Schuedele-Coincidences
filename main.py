@@ -1,7 +1,7 @@
 # Import the script that contains the class
 import scheudele as sch
 
-##Initialize an object, to need to pass the file that contains the schedules
+##Initialize an object, you need to pass the path file that contains the schedules
 path= "txt_in_files\work_schedule_2.txt"
 sch = sch.ACME_schuedele(path)
 
