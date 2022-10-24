@@ -61,7 +61,6 @@ class ACME_schuedele:
     ## This method create a txt file with the coincides.
     def create_output_file(self):
         aux_file=self.txt_file.split("\\")
-        print(aux_file)
         self.f1 = open("txt_out_files/"+aux_file[1]+"_output"+".txt", "w")
         for i in self.coincided:
             self.f1.write(i+"\n")
