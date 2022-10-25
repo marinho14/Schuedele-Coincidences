@@ -34,14 +34,36 @@ class ACME_schuedele:
         self.Schedules_split = []
         self.Schedules_split = [item.split(',') for item in self.Schedules]
 
+
+    def __hour_comparation(self,hour_1,hour_2):
+        if((hour_1[0]>hour_2[0]) or (hour_1[0]==hour_2[0] and hour_1[1]>hour_2[1])or (hour_1[0]==hour_2[0] and hour_1[1]==hour_2[1])):
+            return True
+        return False
+    
+    def __verification_hour(self,h1,h2):
+        cond_1 = (self.__hour_comparation(h2[0],h1[0]) and  self.__hour_comparation(h1[1],h2[1]))
+        cond_2 = (self.__hour_comparation(h1[0],h2[0]) and  self.__hour_comparation(h2[1],h1[0]))
+        cond_3 = (self.__hour_comparation(h2[1],h1[1]) and  self.__hour_comparation(h1[1],h2[0]))   
+        if(cond_1 or cond_2 or cond_3):
+            return True
+        return False
+
+
+
    ## This Private method iterate all element in a list, and comparate if each element is in a list in a list of lists
     def __func_iterate_list(self,new_list,index_list):
         Output=[]
         for i in range(index_list+1,len(self.Schedules_split)):
             acum=0
             for j in new_list:
-                if(j in self.Schedules_split[i]):
-                    acum+=1
+                for k in self.Schedules_split[i]:
+                    if(j[0:2]==k[0:2]):
+                        schu   =list(map(lambda x: x.split(":"),j[2:len(j)].split('-')))
+                        schu_2 =list(map(lambda x: x.split(":"),k[2:len(k)].split('-')))
+                        schu   = [[int((j)) for j in i] for i in schu]
+                        schu_2 = [[int((j)) for j in i] for i in schu_2]
+                        if(self.__verification_hour(schu,schu_2)==True):
+                            acum+=1
             Output.append(str(self.Employes[index_list]+'-'+self.Employes[i]+': '+str(acum)))    
         return Output
 
@@ -68,4 +90,5 @@ class ACME_schuedele:
             self.f1.write(i+"\n")
         self.f1.close() 
         print ("Txt with the Output response created in "+ aux_file[0]+"_output"+".txt")
+
         

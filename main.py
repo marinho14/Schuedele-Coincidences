@@ -2,7 +2,7 @@
 import scheudele as sch
 
 ##Initialize an object, you need to pass the path file that contains the schedules
-path= "txt_in_files\work_schedule_3.txt"
+path= "txt_in_files\work_schedule_2.txt"
 sch = sch.ACME_schuedele(path)
 
 ## You can use the metod read_text(), to read the content and display it.

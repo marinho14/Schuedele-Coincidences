@@ -30,7 +30,7 @@ class Test_coincidences(unittest.TestCase):
         
     def test_Example_2(self):
         list_bool=[]
-        real_output= ['RENE-ASTRID: 1']
+        real_output= ['RENE-ASTRID: 3']
         out_ex1,real_out_ex1= self.__read_output("txt_out_files\work_schedule_2_output.txt",real_output)
         for i in out_ex1:
             if i in real_out_ex1:
