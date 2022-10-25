@@ -66,6 +66,8 @@ For the solution of this exercise, a class was created that has several methods 
 
 - [Class](scheudele.py)
 
+Below is a class diagram of the solution, if you want to go into detail, please read the comments in the script, as they describe the function of each method and its use in the code
+
 <p align="center" > 
    <img src=Images/Class.png>
 </p>
