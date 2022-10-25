@@ -67,5 +67,5 @@ For the solution of this exercise, a class was created that has several methods 
 - [Class](scheudele.py)
 
 <p align="center" > 
-   <img src=Images/class.png>
+   <img src=Images/Class.png>
 </p>
