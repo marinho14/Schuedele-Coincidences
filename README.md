@@ -53,6 +53,7 @@ In this script you will find a line of code that defines the path of the file, i
 ```
 
 ## Principal Idea
+The main idea of ​​the solution is to make several iterations of comparisons, the idea is to compare each time slot of each employee, with the complete schedule of the rest of the employees, each time a SLOT coincides with a time slot of the other employee's schedule. one will be added to the counter that counts the comparisons between them.
 
 <p align="center" > 
    <img src=Images/Explication.jpg>
@@ -60,3 +61,11 @@ In this script you will find a line of code that defines the path of the file, i
 
 
 ## ACME CLASS
+
+For the solution of this exercise, a class was created that has several methods to calculate the coincidences of schedules between ACME employees. The class is in this script.
+
+- [Class](scheudele.py)
+
+<p align="center" > 
+   <img src=Images/class.png>
+</p>
