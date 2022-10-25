@@ -31,7 +31,7 @@ Txt with the Output response created in txt_in_files\work_schedule.txt_output.tx
 ```
 At the end a text file with the matches will be created in the following folder, named after the same input file with "_output".
 
-- [.txt Input files](txt_output_files)
+- [.txt Output files](txt_out_files)
 
 ## Variables that you can change
 
