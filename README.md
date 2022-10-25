@@ -29,6 +29,9 @@ ANDRES=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 ['RENE-ASTRID: 2', 'RENE-ANDRES: 2', 'ASTRID-ANDRES: 3']
 Txt with the Output response created in txt_in_files\work_schedule.txt_output.txt
 ```
+At the end a text file with the matches will be created in the following folder, named after the same input file with "_output".
+
+- [.txt Input files](txt_output_files)
 
 ## Variables that you can change
 
