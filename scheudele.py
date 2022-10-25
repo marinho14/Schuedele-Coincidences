@@ -10,6 +10,7 @@ class ACME_schuedele:
             self.txt_file = txt_file
             self.f= open(self.txt_file,'r') 
             self.txt=  self.f.read()
+            self.f.close() 
         except FileNotFoundError:
             print("The 'docs' directory does not exist")
     
@@ -61,8 +62,10 @@ class ACME_schuedele:
     ## This method create a txt file with the coincides.
     def create_output_file(self):
         aux_file=self.txt_file.split("\\")
-        self.f1 = open("txt_out_files/"+aux_file[1]+"_output"+".txt", "w")
+        aux_file=aux_file[1].split(".")
+        self.f1 = open("txt_out_files/"+aux_file[0]+"_output"+".txt", "w")
         for i in self.coincided:
             self.f1.write(i+"\n")
-        print ("Txt with the Output response created in "+ self.txt_file+"_output"+".txt")
+        self.f1.close() 
+        print ("Txt with the Output response created in "+ aux_file[0]+"_output"+".txt")
         
