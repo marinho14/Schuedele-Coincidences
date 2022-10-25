@@ -55,7 +55,7 @@ In this script you will find a line of code that defines the path of the file, i
 ## Principal Idea
 
 <p align="center" > 
-   <img src=resources/turtle_gui.gif>
+   <img src=Images/Explication.jpg>
 </p>
 
 
