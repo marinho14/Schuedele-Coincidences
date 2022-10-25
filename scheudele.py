@@ -34,12 +34,13 @@ class ACME_schuedele:
         self.Schedules_split = []
         self.Schedules_split = [item.split(',') for item in self.Schedules]
 
-
+    ## This method only compare if one hour is greater or lesser
     def __hour_comparation(self,hour_1,hour_2):
         if((hour_1[0]>hour_2[0]) or (hour_1[0]==hour_2[0] and hour_1[1]>hour_2[1])or (hour_1[0]==hour_2[0] and hour_1[1]==hour_2[1])):
             return True
         return False
     
+    ## This method verify if the Employes coincides in any tine
     def __verification_hour(self,h1,h2):
         cond_1 = (self.__hour_comparation(h2[0],h1[0]) and  self.__hour_comparation(h1[1],h2[1]))
         cond_2 = (self.__hour_comparation(h1[0],h2[0]) and  self.__hour_comparation(h2[1],h1[0]))
@@ -48,9 +49,7 @@ class ACME_schuedele:
             return True
         return False
 
-
-
-   ## This Private method iterate all element in a list, and comparate if each element is in a list in a list of lists
+   ## This Private method iterate all element in a list, and comparate if each hour is betwwen inside other
     def __func_iterate_list(self,new_list,index_list):
         Output=[]
         for i in range(index_list+1,len(self.Schedules_split)):

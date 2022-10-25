@@ -60,6 +60,8 @@ The main idea of ​​the solution is to make several iterations of comparisons
 </p>
 
 
+To compare if two were at the same time in the office, first the day was compared, if the day coincided, it was proceeded to see if the hours coincided, for that different comparison conditions were generated between the hours of the employees
+
 ## ACME CLASS
 
 For the solution of this exercise, a class was created that has several methods to calculate the coincidences of schedules between ACME employees. The class is in this script.
