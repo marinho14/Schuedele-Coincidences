@@ -71,3 +71,36 @@ Below is a class diagram of the solution, if you want to go into detail, please 
 <p align="center" > 
    <img src=Images/Class.png>
 </p>
+
+## TESTS
+
+To test the code, a Unittest was performed in python, the script is as follows:
+
+- [Test](test.py)
+
+In this script, the Test_coincidences class was created, a method was created to read the content of the [output files](txt_out_files) that are generated when running the [main.py](main.py) code, in addition to this method, 3 equal test methods were created to test the correct operation of this, the structure of the methods is as follows. 
+
+
+```python
+
+    def test_Example_n(self): ##You can replace n with the number of the test
+        list_bool=[]
+        real_output= ['ASTRID-RENE: 2','ASTRID-ANDRES: 3', 'RENE-ANDRES: 2'] ## Here you can write the right output.
+        out_ex1,real_out_ex1= self.__read_output("path",real_output) ## Here the code read the output of the main.py
+        for i in out_ex1:  ## Iterates the Out of the code to compare with the real output
+            if i in real_out_ex1:
+                list_bool.append(True)
+            else:
+                list_bool.append(False)
+        self.assertTrue(all(p == True for p in list_bool)) ## If every match its ok the assert pass
+```
+
+When running the test script, an output like the following should be displayed on the screen.
+
+```console
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+```
